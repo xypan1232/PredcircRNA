@@ -679,6 +679,8 @@ def get_hg19_sequence():
     
     sequences = {}
     dir1 = DATA_DIR + 'hg19_seq/'
+    if not os.path.exists(dir1):
+        os.mkdir(dir1)
     #for chr_name in chr_foc
     for chr_name in chr_focus:
         file_name = chr_name + '.fa.gz'
