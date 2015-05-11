@@ -19,7 +19,7 @@ chr7	138593736	138597206	-	gene2 <br>
 chr22	39134591	39137055	-	gene3 <br>
 
 
-how to use the tool, the command as follows: <br>
+How to use the tool, the command as follows: <br>
 python PredcircRNA.py --inputfile=test_bed --outputfile=test_bed_out
-<br>
-the output file have corresponding lncRNA type in last column.
+<br><br>
+The output file have corresponding lncRNA type in last column.
