@@ -12,3 +12,14 @@ Dependcy: <br>
 3. txCdsPredict: http://hgdownload.cse.ucsc.edu/admin/ <br>
 4. Tandem repeats finder(trf): http://tandem.bu.edu/trf/trf.download.html <br>
 
+
+Input bed file format (such as test_bed): <br>
+chr2	69304539	69318051	+	gene1 <br>
+chr7	138593736	138597206	-	gene2 <br>
+chr22	39134591	39137055	-	gene3 <br>
+
+
+how to use the tool, the command as follows: <br>
+python PredcircRNA.py --inputfile=test_bed --outputfile=test_bed_out
+
+
