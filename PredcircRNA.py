@@ -7,6 +7,7 @@ import os
 import bz2
 import cPickle
 import pdb
+import urllib
 import argparse
 from modshogun import CombinedFeatures, RealFeatures, BinaryLabels, MulticlassLabels
 from modshogun import CombinedKernel, PolyKernel, CustomKernel
@@ -19,6 +20,11 @@ FEATURE_DIR = 'features/'
 DATA_DIR = 'data/'
 
 def read_phastCons(phscore_file):
+    if not os.path.exists(phscore_file):
+        print 'downloading phylop file'
+        url_add = 'http://rth.dk/resources/mirnasponge/data/placental_phylop46way.tar.gz'
+        urllib.urlretrieve(url_add, phscore_file)
+
     fp = gzip.open(phscore_file, 'r')
     phscore_dict = {}
     tmp_dict = {}
@@ -508,6 +514,9 @@ def read_snp_database(snp_file):
      'chr15', 'chr16', 'chr17', 'chr18', 'chr19', 'chr20', 'chr21',
      'chr22', 'chrX', 'chrY']
     strand_dict = {'1':'+', '-1':'-'}
+    if not os.path.exists(snp_file):
+        url_add = 'http://rth.dk/resources/mirnasponge/data/snp_mart.gz'
+        urllib.urlretrieve(url_add, snp_file) 
     fp = gzip.open(snp_file, 'r')
     for line in fp:
         values = line.split()
