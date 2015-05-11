@@ -891,7 +891,12 @@ def predict_new_data(graph_file, cons_file, tri_file, other_feature_file):
     status = subkfeats_train.load_serializable(fstream)
     feats_train.append_feature_obj(subkfeats_train)
     kernel.append_kernel(subkernel)
-         
+
+    model_file = "models/mkl.dat"
+    if not os.path.exists(model_file):
+        print 'downloading model file'
+        url_add = 'http://rth.dk/resources/mirnasponge/data/mkl.dat'
+        urllib.urlretrieve(url_add, model_file) 
     print 'loading trained model'
     fstream = SerializableAsciiFile("models/mkl.dat", "r")
     new_mkl= MKLClassification()
