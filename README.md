@@ -23,3 +23,7 @@ NOTICE: in the last column, we need have unique name (here is gene1, gene2...) f
 python PredcircRNA.py --inputfile=test_bed --outputfile=test_bed_out
 <br><br>
 The output file have corresponding lncRNA type in last column.
+
+
+<b>Reference</b> <br>
+Xiaoyong Pan, Kai Xiong. PredcircRNA: computational classification of circular RNA from other long non-coding RNA using hybrid features. Mol. BioSyst., 2015, 11, 2219-2226
