@@ -24,6 +24,9 @@ python PredcircRNA.py --inputfile=test_bed --outputfile=test_bed_out
 <br><br>
 The output file have corresponding lncRNA type in last column.
 
+<b>Webserver </b>: <br>
+http://rth.dk/resources/webcircrna
+You can also use our updated webserver to predict the circRNA potential for coding and non-coding RNAs.
 
 <b>Reference</b> <br>
 Xiaoyong Pan, Kai Xiong. PredcircRNA: computational classification of circular RNA from other long non-coding RNA using hybrid features. Mol. BioSyst., 2015, 11, 2219-2226
